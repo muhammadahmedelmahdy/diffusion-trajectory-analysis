@@ -40,6 +40,8 @@ class SD3FlowMatchingInference:
                 negative_prompt=negative_prompt,
                 num_inference_steps=num_steps,
                 guidance_scale=guidance_scale,
+                height=512,
+                width=512,
                 callback_on_step_end=save_step if capture_steps else None,
                 callback_on_step_end_tensor_inputs=["latents"] if capture_steps else None,
             )

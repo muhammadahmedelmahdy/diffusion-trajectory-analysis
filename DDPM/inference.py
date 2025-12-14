@@ -11,7 +11,7 @@ class DDPMInference:
     def run_inference(self,num_steps=50):
         self.scheduler.set_timesteps(num_steps,device=self.device)
         latents = torch.randn(
-            (1, self.unet.config.in_channels, 32, 32),
+            (1, self.unet.config.in_channels, 64, 64),
             device=self.device,
             dtype=self.unet.dtype,
         )
