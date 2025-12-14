@@ -124,7 +124,7 @@ $$
 \{x_T, x_{T-1}, \dots, x_0\}
 $$
 
-where \( x_t \in \mathbb{R}^{C \times H \times W} \) represents either:
+where $$ \( x_t \in \mathbb{R}^{C \times H \times W} \) $$ represents either:
 - a pixel-space tensor (DDPM / DDIM), or
 - a latent-space tensor (Latent Diffusion / Flow Matching).
 
@@ -163,16 +163,19 @@ This experiment studies **directional consistency** of inference steps.
 We define:
 
 **Global direction**
+
 $$
 d_{\text{global}} = \frac{x_0 - x_T}{\|x_0 - x_T\|_2}
 $$
 
 **Local step direction**
+
 $$
 d_t = \frac{x_{t-1} - x_t}{\|x_{t-1} - x_t\|_2}
 $$
 
 **Directional alignment**
+
 $$
 \text{align}(t) = \langle d_t,\ d_{\text{global}} \rangle
 $$
